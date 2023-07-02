@@ -23,7 +23,7 @@ const initialValues = {
 };
 
 const validationSchema = Yup.object({
-  name: Yup.string().required("Name is required"),
+  name: Yup.string().required("Name is required").min(3, "Name too short"),
   address: Yup.string().required("Address is required"),
   country: Yup.string().required("Country is required"),
   gender: Yup.string().required("Gender is required"),
